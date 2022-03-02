@@ -150,6 +150,10 @@ func (pack *Pack) HasWorldTemplate() bool {
 	return pack.manifest.worldTemplate
 }
 
+func (pack *Pack) Content() *bytes.Reader {
+  return pack.content
+}
+
 // Checksum returns the SHA256 checksum made from the full, compressed content of the resource pack archive.
 // It is transmitted as a string over network.
 func (pack *Pack) Checksum() [32]byte {
